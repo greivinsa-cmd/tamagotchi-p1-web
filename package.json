@@ -1,0 +1,47 @@
+{
+  "name": "tamagotchi-p1-web",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "wasm": "cd src/wasm && make clean && wget https://archive.org/download/mame-0.221-roms-merged/tama.zip/tama.b && make",
+    "dev": "npm run wasm && vite",
+    "build": "npm run wasm && tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "npm run wasm && vite preview"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@sentry/react": "^9.9.0",
+    "@sentry/vite-plugin": "^3.2.2",
+    "@tailwindcss/vite": "^4.0.14",
+    "clsx": "^2.1.1",
+    "dotenv": "^16.4.7",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.14"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.22.0",
+    "eslint-import-resolver-typescript": "^3.8.7",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-react-dom": "^1.33.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "eslint-plugin-react-x": "^1.33.0",
+    "eslint-plugin-readable-tailwind": "^2.0.0",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "globals": "^15.15.0",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.26.1",
+    "vite": "^6.2.0"
+  }
+}
